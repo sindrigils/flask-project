@@ -4,10 +4,67 @@
     <head>
         <title>Job Application</title>
 
+        <style>
+            h1 {
+                font-size: 40px;
+                font-family: Roboto;
+                font-weight: normal;
+                color: rgb(50, 50, 50);
+                text-align: center;
+            }
+
+            #banner {
+                width: 100%;
+                height: 380px;
+                object-fit: cover;
+            }
+            
+            h2 {
+                font-size: 32px;
+                font-family: Roboto;
+                color: rgb(100, 100, 100);
+                text-align: center;
+                font-weight: normal;
+            }
+
+            .bodytext {
+                font-family: Roboto;
+                color: rgb(80, 80, 80);
+            }
+
+            #container {
+                max-width: 720px;
+                margin: 0 auto;
+            }
+        </style>
+
     </head>
 
     <body>
-        <p>Hello get ya job adsad</p>
+        <div id="container">
+            <h1>Jovian Careers</h1>
+
+            <img id="banner" src="../static/images/headimg.jpg" alt="Do something great" height="320px">
+
+            <h2>About Jovian</h2>
+
+            <p class="bodytext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed turpis sapien, feugiat a condimentum quis, luctus non felis. 
+                Vestibulum suscipit dolor magna, id consectetur ex ornare ac. Vivamus dignissim varius massa vitae tempor. Maecenas sodales congue 
+                lorem suscipit imperdiet. Mauris condimentum gravida lectus, a sagittis metus eleifend non. Duis non euismod velit, ac sollicitudin 
+                ligula. Duis vitae auctor nisl, ac sollicitudin quam.</p>
+            
+                <h2>Open Positions</h2>
+                <div>
+                    {% for job in jobs %}
+                        {% include "jobitem.html" %}
+                    {% endfor %}
+                </div>
+                 
+                <div style="text-align: center;">
+                    <button>Contact Us</button>
+                </div>
+                
+        </div>
     </body>
 
     
