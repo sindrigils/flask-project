@@ -20,6 +20,7 @@
                 width: 100%;
                 height: 380px;
                 object-fit: cover;
+                margin-bottom: 16px;
             }
             
             h2 {
@@ -44,17 +45,22 @@
     </head>
 
     <body>
+        {% include 'nav.html' %}
+        <img id="banner" src="../static/images/headimg.jpg" alt="Do something great" style="height:320px; border-radius:4px;">
+
         <div id="container">
+
             <h1>Jovian Careers</h1>
+            <div class="row" style="margin-bottom:16px;">
+                <div class="col-md-6">
+                <p class="bodytext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed turpis sapien, feugiat a condimentum quis, luctus non felis. 
+                    Vestibulum suscipit dolor magna, id consectetur ex ornare ac. Vivamus dignissim varius massa vitae tempor. Maecenas sodales congue 
+                    lorem suscipit imperdiet. Mauris condimentum gravida lectus, a sagittis metus eleifend non. Duis non euismod velit, ac sollicitudin 
+                    ligula. Duis vitae auctor nisl, ac sollicitudin quam.</p>
+                </div>
 
-            <img id="banner" src="../static/images/headimg.jpg" alt="Do something great" height="320px">
-
-            <h2>About Jovian</h2>
-
-            <p class="bodytext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed turpis sapien, feugiat a condimentum quis, luctus non felis. 
-                Vestibulum suscipit dolor magna, id consectetur ex ornare ac. Vivamus dignissim varius massa vitae tempor. Maecenas sodales congue 
-                lorem suscipit imperdiet. Mauris condimentum gravida lectus, a sagittis metus eleifend non. Duis non euismod velit, ac sollicitudin 
-                ligula. Duis vitae auctor nisl, ac sollicitudin quam.</p>
+                    <div class="d-none d-md-block col-md-6"><img src="../static/images/people.jpg" alt="People Working" height="320px"></div>
+            </div>
             
                 <h2>Open Positions</h2>
                 <div>
@@ -69,6 +75,10 @@
                 
         </div>
     </body>
+
+    <footer>
+        {% include 'footer.html' %}
+    </footer>
 
     
 </html>
